@@ -24,6 +24,8 @@ setup(
     },
     entry_points={
         'console_scripts': [
+            'talker = var_fwt_randomalert.publisher_node:main',
+            'processor = var_fwt_randomalert.processor_node:main',
         ],
     },
 )
