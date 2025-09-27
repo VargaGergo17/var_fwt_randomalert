@@ -13,7 +13,7 @@ class ProcessorNode(Node):
             10)
 
     def listener_callback(self, msg):
-        processed = msg.data.upper()  # példa: nagybetűsítjük az üzenetet
+        processed = msg.data.upper()  
         self.get_logger().info(f'Received: "{msg.data}" | Processed: "{processed}"')
 
 
