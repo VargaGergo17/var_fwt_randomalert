@@ -1,30 +1,20 @@
-from setuptools import find_packages, setup
+from setuptools import setup
 
 package_name = 'var_fwt_randomalert'
 
 setup(
     name=package_name,
     version='0.0.0',
-    packages=find_packages(exclude=['test']),
-    data_files=[
-        ('share/ament_index/resource_index/packages',
-            ['resource/' + package_name]),
-        ('share/' + package_name, ['package.xml']),
-    ],
+    packages=[package_name],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='he',
-    maintainer_email='he@todo.todo',
-    description='TODO: Package description',
-    license='TODO: License declaration',
-    extras_require={
-        'test': [
-            'pytest',
-        ],
-    },
+    maintainer='',
+    maintainer_email='',
+    description='ROS2 Publisher/Processor demo package',
+    license='Apache-2.0',
     entry_points={
         'console_scripts': [
-            'talker = var_fwt_randomalert.publisher_node:main',
+            'publisher = var_fwt_randomalert.publisher_node:main',
             'processor = var_fwt_randomalert.processor_node:main',
         ],
     },
